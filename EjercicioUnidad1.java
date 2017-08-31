@@ -149,79 +149,116 @@ public class EjercicioUnidad1
 
 	public static void cuentaVocales()
 	{
-      String cad=showInputDialog("Escribe un texto");
-      cad=cad.toLowerCase();
-      int v=0;
-      for (int i=0; i<cad.length();i++)
-      if(cad.charAt(i)=='a' || cad.charAt(i)=='e' || cad.charAt(i)=='i' || cad.charAt(i)=='o' || cad.charAt(i)=='u')
-      v++;
-      showMessageDialog(null,cad+" tiene "+v+" vocales");
+		String cad = showInputDialog( "Escribe un texto" );
+		cad = cad.toLowerCase();
+		int v = 0;
+		for ( int i = 0 ; i < cad.length() ; i++ )
+			if ( cad.charAt( i ) == 'a' || cad.charAt( i ) == 'e' || cad.charAt( i ) == 'i' || cad.charAt( i ) == 'o' || cad.charAt( i ) == 'u' )
+				v++;
+		showMessageDialog( null , cad + " tiene " + v + " vocales" );
 	}// Fin Cuenta vocales
-   
-   public static void numeros1aN(){
-      int n=Integer.parseInt(showInputDialog("Escribe un numero"));
-      String cad="";
-      for (int i=1;i<=n;i++)cad=cad+i+"\n";
-      showMessageDialog(null,cad);
-   
-   }//Fin numeros de 1 a N
-      public static void numerosParesde1aN(){
-         int n=Integer.parseInt(showInputDialog("Escribe un numero"));
-         String cad="";
-         for (int i=1;i<=n;i++)
-            if (i%2==0)
-            cad=cad+i+"\n";
-      
-         showMessageDialog(null,cad);
-      
-   }// fin de clase
-         public static void sumaNumerosimpares1aN(){
-            int n=Integer.parseInt(showInputDialog("Escribe un numero"));
-            String cad="";
-            int impar=0;
-            for (int i=1;i<=n;i++)
-               if (i%2!=0){ 
-               cad=cad+i+"\n";
-               impar=impar+i;
-            }
-      
-            showMessageDialog(null,cad+ "\nLa suma es " +impar);
-}//fin de clase
-         
-         public static void numerosAExponentes(){
-         
-         int n=Integer.parseInt(showInputDialog("Escribe un numero y te mostrara su cuadratico"));
-         String cad="";
-         for (int i=1;i<=n;i++){
-               int y=i*i;
-               cad=cad+i+" - "+y+"\n";
-               
-               }
-      
-         showMessageDialog(null,cad);
-      
-   }//Fin numeroAExponentes
-         public static void numerosSobreX(){
-         
-        int n=Integer.parseInt(showInputDialog("Escribe un numero "));
-         String cad="";
-         float suma=0;
-         for (int i=1;i<=n;i++){
-               if(i%2==0)
-               suma=suma-(1/(float)i);
-               
-               else suma=suma+(1/(float)i);
-         }
-         showMessageDialog(null,suma);
-      }
-         
-         
 
-         
+	public static void numeros1aN()
+	{
+		int n = Integer.parseInt( showInputDialog( "Escribe un numero" ) );
+		String cad = "";
+		for ( int i = 1 ; i <= n ; i++ )
+			cad = cad + i + "\n";
+		showMessageDialog( null , cad );
+
+	}//Fin numeros de 1 a N
+
+	public static void numerosParesde1aN()
+	{
+		int n = Integer.parseInt( showInputDialog( "Escribe un numero" ) );
+		String cad = "";
+		for ( int i = 1 ; i <= n ; i++ )
+			if ( i % 2 == 0 )
+				cad = cad + i + "\n";
+
+		showMessageDialog( null , cad );
+
+	}// fin de clase
+
+	public static void sumaNumerosimpares1aN()
+	{
+		int n = Integer.parseInt( showInputDialog( "Escribe un numero" ) );
+		String cad = "";
+		int impar = 0;
+		for ( int i = 1 ; i <= n ; i++ )
+			if ( i % 2 != 0 )
+			{
+				cad = cad + i + "\n";
+				impar = impar + i;
+			}
+
+		showMessageDialog( null , cad + "\nLa suma es " + impar );
+	}//fin de clase
+
+	public static void numerosAExponentes()
+	{
+
+		int n = Integer.parseInt( showInputDialog( "Escribe un numero y te mostrara su cuadratico" ) );
+		String cad = "";
+		for ( int i = 1 ; i <= n ; i++ )
+		{
+			int y = i * i;
+			cad = cad + i + " - " + y + "\n";
+
+		}
+
+		showMessageDialog( null , cad );
+
+	}//Fin numeroAExponentes
+
+	public static void numerosSobreX()
+	{
+
+		int n = Integer.parseInt( showInputDialog( "Escribe un numero " ) );
+		String cad = "";
+		float suma = 0;
+		for ( int i = 1 ; i <= n ; i++ )
+		{
+			if ( i % 2 == 0 )
+				suma = suma - ( 1 / ( float ) i );
+
+			else
+				suma = suma + ( 1 / ( float ) i );
+		}
+		showMessageDialog( null , suma );
+	}//FIn
+
+	public static void tarea()
+	{
+		int n = Integer.parseInt( showInputDialog( "Escribe un numero" ) );
+		float d = 0;
+		for ( int i = 1 ; i <= n ; i++ )
+			if ( n % i == 0 )
+				d++;
+		if ( d == 2 )
+			showMessageDialog( null , "El numero " + n + " es primo" );
+		else
+			showMessageDialog( null , "El numero " + n + " no es primo" );
+	}
+
+	public static void tarea2()
+	{
+		int n = Integer.parseInt( showInputDialog( "Escribe un numero" ) );
+
+		int suma = 0;
+		for ( int i = 1 ; i < n ; i++ )
+			if ( n % i == 0 )
+				suma += i;
+		if ( suma == n )
+			showMessageDialog( null , "Tu numero es perfecto" );
+		else
+			showMessageDialog( null , "Tu numero no es perfecto" );
+
+	}
 
 	public static void main( String[] args )
 	{
-		numerosSobreX();
+		tarea2();
 
 	}//main
 
