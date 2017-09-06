@@ -32,4 +32,20 @@ public class Funciones{
          p=p*x;
     return p;
  }//Fin potencia
+
+public static String fib(int n){
+   String cad="";
+   int a=0,b=1,c;
+   for (int i=2; i<=n; i++){
+      c=a+b;
+      cad=cad+c+",";
+      a=b;
+      b=c;
+      
+      
+      }//Fin for
+      return cad;
+ }//Fin fib
+
+ 
 }//class
