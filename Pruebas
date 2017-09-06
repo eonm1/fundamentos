@@ -1,0 +1,33 @@
+import static javax.swing.JOptionPane.*;
+
+public class Pruebas{
+  public static void perfectos1aN(){
+  
+    int n=Integer.parseInt(showInputDialog("n"));
+    String cad="";
+    for(int i=1;i<=n;i++)
+      if(Funciones.esPerfecto(i))cad=cad+i+" - ";
+       showMessageDialog(null,cad);
+  
+  }//Fin perfectos1aN
+  
+  public static void factorialN(){
+     int n=Integer.parseInt(showInputDialog("Escribe el numero"));
+     int f=Funciones.factorial(n);
+     showMessageDialog(null,n+"! ="+f);
+  
+  }//Fin factorialN
+  
+  public static void potenciaDeXaN(){
+   int x=Integer.parseInt(showInputDialog("Escribe un numero"));
+     int n=Integer.parseInt(showInputDialog("Escribe un numero"));
+     
+     int f=Funciones.potencia(x,n);
+     
+     showMessageDialog(null,x+"^"+n+"="+f);
+  }//Fin potenciaDeXaN
+  
+  public static void main(String ar[]){
+     potenciaDeXaN();    
+    }//main
+}//class
