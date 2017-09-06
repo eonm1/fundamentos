@@ -1,0 +1,35 @@
+public class Funciones{
+
+  public static int suma(int a,int b){return a+b;}
+  public static boolean esPrimo(int n){
+    int d=0;
+    for(int i=1;1<=n;i++)
+      if(n%i==0)d++;
+        return d==2; //if(d==2)return true; else return false;(es lo mismo)
+ }//esPrimo       
+  public static boolean esPerfecto(int n){
+    int d=0;
+     for(int i=1;1<n;i++)
+      if (n%i==0)d=d+i;
+       return d==n;
+       
+ }//esPerfecto       
+ 
+ 
+ public static int factorial(int n){
+   int f=1;
+   
+   for(int i=1; i<=n;i++)
+      f=f*i;
+      
+   return f;
+ 
+ }//Fin factorial 
+ 
+ public static int potencia(int x, int n){
+    int p=1;
+      for (int i=1; i<=n; i++)
+         p=p*x;
+    return p;
+ }//Fin potencia
+}//class
